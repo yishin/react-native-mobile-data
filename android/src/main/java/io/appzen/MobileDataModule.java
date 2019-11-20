@@ -56,4 +56,46 @@ public class MobileDataModule extends ReactContextBaseJavaModule {
             callback.invoke(false);
         }
     }
+
+    // public void setMobileDataState(boolean mobileDataEnabled)
+    // {
+    //     try
+    //     {
+    //         TelephonyManager telephonyService = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+
+    //         Method setMobileDataEnabledMethod = telephonyService.getClass().getDeclaredMethod("setDataEnabled", boolean.class);
+
+    //         if (null != setMobileDataEnabledMethod)
+    //         {
+    //             setMobileDataEnabledMethod.invoke(telephonyService, mobileDataEnabled);
+    //         }
+    //     }
+    //     catch (Exception ex)
+    //     {
+    //         Log.e(TAG, "Error setting mobile data state", ex);
+    //     }
+    // }
+
+    // public boolean getMobileDataState()
+    // {
+    //     try
+    //     {
+    //         TelephonyManager telephonyService = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+
+    //         Method getMobileDataEnabledMethod = telephonyService.getClass().getDeclaredMethod("getDataEnabled");
+
+    //         if (null != getMobileDataEnabledMethod)
+    //         {
+    //             boolean mobileDataEnabled = (Boolean) getMobileDataEnabledMethod.invoke(telephonyService);
+
+    //             return mobileDataEnabled;
+    //         }
+    //     }
+    //     catch (Exception ex)
+    //     {
+    //         Log.e(TAG, "Error getting mobile data state", ex);
+    //     }
+
+    //     return false;
+    // }
 }
