@@ -52,6 +52,8 @@ public class MobileDataModule extends ReactContextBaseJavaModule {
         }
         catch (Exception e) {
             e.printStackTrace();
+
+            callback.invoke(false);
         }
     }
 }
