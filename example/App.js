@@ -8,7 +8,7 @@
 
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, Button} from 'react-native';
-import RNMobileData from 'react-native-mobile-data';
+import MobileData from 'react-native-mobile-data';
 
 export default class App extends Component {
   constructor(props) {
@@ -33,12 +33,12 @@ export default class App extends Component {
         <View style={{ flexDirection: 'row', alignSelf: 'stretch', justifyContent: 'space-around' }}>
           <Button
             title='Enable'
-            onPress={() => RNMobileData.setMobileDataEnable(true)}
+            onPress={() => MobileData.setMobileDataEnabled(true)}
             color='blue'
           />
           <Button
             title='Disable'
-            onPress={() => RNMobileData.setMobileDataEnable(false)}
+            onPress={() => MobileData.setMobileDataEnabled(false)}
             color='red'
           />
         </View>

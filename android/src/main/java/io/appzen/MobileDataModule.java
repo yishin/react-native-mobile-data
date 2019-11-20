@@ -8,6 +8,7 @@ import com.facebook.react.bridge.Callback;
 import java.lang.Boolean;
 import java.lang.reflect.*;
 import android.net.ConnectivityManager;
+import android.util.Log;
 
 public class MobileDataModule extends ReactContextBaseJavaModule {
 
@@ -30,8 +31,10 @@ public class MobileDataModule extends ReactContextBaseJavaModule {
     // }
 
     @ReactMethod
-    public void setMobileDataEnabled(boolean enabled) {
+    public void setMobileDataEnabled(boolean enabled, Callback callback) {
         try {
+            Log.v("Entering setMobileDataEnabled()");
+
             final ConnectivityManager conman = (ConnectivityManager) this.reactContext.getSystemService(this.reactContext.getApplicationContext().CONNECTIVITY_SERVICE);
             final Class conmanClass = Class.forName(conman.getClass().getName());
             final Field iConnectivityManagerField = conmanClass.getDeclaredField("mService");
@@ -42,6 +45,10 @@ public class MobileDataModule extends ReactContextBaseJavaModule {
             setMobileDataEnabledMethod.setAccessible(true);
 
             setMobileDataEnabledMethod.invoke(iConnectivityManager, enabled);
+
+            callback.invoke(true);
+
+            Log.v("Terminating setMobileDataEnabled()");
         }
         catch (Exception e) {
             e.printStackTrace();
