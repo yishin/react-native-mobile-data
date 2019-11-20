@@ -33,7 +33,7 @@ public class MobileDataModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void setMobileDataEnabled(boolean enabled, Callback callback) {
         try {
-            Log.v("Entering setMobileDataEnabled()");
+            Log.v("MobileData", "Entering setMobileDataEnabled()");
 
             final ConnectivityManager conman = (ConnectivityManager) this.reactContext.getSystemService(this.reactContext.getApplicationContext().CONNECTIVITY_SERVICE);
             final Class conmanClass = Class.forName(conman.getClass().getName());
@@ -48,7 +48,7 @@ public class MobileDataModule extends ReactContextBaseJavaModule {
 
             callback.invoke(true);
 
-            Log.v("Terminating setMobileDataEnabled()");
+            Log.v("MobileData", "Terminating setMobileDataEnabled()");
         }
         catch (Exception e) {
             e.printStackTrace();
