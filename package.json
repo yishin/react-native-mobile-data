@@ -1,0 +1,33 @@
+{
+  "name": "react-native-mobile-data",
+  "title": "React Native Mobile Data",
+  "version": "1.0.0",
+  "description": "TODO",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yishin/react-native-mobile-data.git",
+    "baseUrl": "https://github.com/yishin/react-native-mobile-data"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": {
+    "name": "YoungIl Shin",
+    "email": "yishin71@email.com"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "peerDependencies": {
+    "react": "16.9.0",
+    "react-native": "0.61.4"
+  },
+  "devDependencies": {
+    "react": "16.9.0",
+    "react-native": "0.61.4"
+  }
+}
